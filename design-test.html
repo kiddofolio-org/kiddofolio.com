@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiddofolio — Design System Proof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .dt-section { padding-block: var(--space-12); border-bottom: 1px solid var(--color-divider); }
+    .dt-h { font-size: var(--text-xs); letter-spacing:0.14em; text-transform:uppercase; color: var(--color-text-faint); margin-bottom: var(--space-6); }
+    .swatches { display:flex; flex-wrap:wrap; gap: var(--space-3); }
+    .sw { width: 84px; }
+    .sw span { display:block; height: 56px; border-radius: var(--radius-md); border:1px solid var(--color-border); }
+    .sw small { font-size: var(--text-xs); color: var(--color-text-muted); display:block; margin-top: var(--space-2); }
+    .surfaces { display:flex; gap: var(--space-3); flex-wrap:wrap; }
+    .surf { padding: var(--space-6); border-radius: var(--radius-md); border:1px solid var(--color-border); font-size: var(--text-sm); }
+  </style>
+</head>
+<body>
+  <header class="header"><div class="container header__inner">
+    <span class="brand__mark" role="img" aria-label="Kiddofolio"></span>
+    <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle theme"></button>
+  </div></header>
+
+  <main class="container" style="padding-block: var(--space-12)">
+    <h1 class="hero__title" style="font-size:var(--text-2xl)">Design system proof</h1>
+
+    <div class="dt-section">
+      <p class="dt-h">Type scale</p>
+      <p style="font-family:var(--font-display); font-size:var(--text-3xl)">Fraunces display 3xl</p>
+      <p style="font-family:var(--font-display); font-size:var(--text-2xl)">Fraunces display 2xl</p>
+      <p style="font-family:var(--font-display); font-size:var(--text-xl)">Fraunces display xl</p>
+      <p style="font-size:var(--text-lg); font-weight:600">General Sans heading lg</p>
+      <p style="font-size:var(--text-base)">General Sans body base — the quick brown fox jumps over the lazy dog.</p>
+      <p style="font-size:var(--text-sm); color:var(--color-text-muted)">Small / UI text sm</p>
+      <p style="font-size:var(--text-xs); color:var(--color-text-faint)">Tiny label xs</p>
+    </div>
+
+    <div class="dt-section">
+      <p class="dt-h">Rainbow brand palette</p>
+      <div class="swatches">
+        <div class="sw"><span style="background:var(--rb-1)"></span><small>#F94144</small></div>
+        <div class="sw"><span style="background:var(--rb-2)"></span><small>#F3722C</small></div>
+        <div class="sw"><span style="background:var(--rb-3)"></span><small>#F9C74F</small></div>
+        <div class="sw"><span style="background:var(--rb-4)"></span><small>#90BE6D</small></div>
+        <div class="sw"><span style="background:var(--rb-5)"></span><small>#43AA8B</small></div>
+        <div class="sw"><span style="background:var(--rb-6)"></span><small>#00B8D9</small></div>
+        <div class="sw"><span style="background:var(--rb-7)"></span><small>#3A86FF</small></div>
+        <div class="sw"><span style="background:var(--rb-8)"></span><small>#5E60CE</small></div>
+        <div class="sw"><span style="background:var(--rb-9)"></span><small>#9D4EDD</small></div>
+        <div class="sw"><span style="background:var(--rb-10)"></span><small>#FF66C4</small></div>
+      </div>
+      <div style="height:8px; border-radius:var(--radius-full); background:var(--rainbow-gradient); margin-top:var(--space-6)"></div>
+    </div>
+
+    <div class="dt-section">
+      <p class="dt-h">Surface layers</p>
+      <div class="surfaces">
+        <div class="surf" style="background:var(--color-bg)">bg</div>
+        <div class="surf" style="background:var(--color-surface)">surface</div>
+        <div class="surf" style="background:var(--color-surface-2)">surface-2</div>
+        <div class="surf" style="background:var(--color-surface-offset)">offset</div>
+        <div class="surf" style="background:var(--color-surface-sunken)">sunken</div>
+      </div>
+    </div>
+
+    <div class="dt-section">
+      <p class="dt-h">Buttons</p>
+      <div style="display:flex; gap:var(--space-4); flex-wrap:wrap">
+        <a class="btn btn--primary">Primary</a>
+        <a class="btn btn--ink">Ink</a>
+        <a class="btn btn--ghost">Ghost</a>
+      </div>
+    </div>
+
+    <div class="dt-section">
+      <p class="dt-h">Rule with label</p>
+      <div class="rule">2025&ndash;26</div>
+    </div>
+  </main>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
