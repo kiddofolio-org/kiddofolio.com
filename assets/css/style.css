@@ -437,9 +437,9 @@ a, button, [role="button"], input, textarea, select {
 .tier__features svg { width: 18px; height: 18px; flex: none; margin-top: 2px; color: var(--tier-check, var(--rb-4)); }
 .tier .btn { margin-top: auto; }
 
-.pricing-notes { margin-top: clamp(var(--space-8), 5vw, var(--space-12)); display: grid; gap: var(--space-3); max-width: 82ch; }
+.pricing-notes { margin-top: clamp(var(--space-8), 5vw, var(--space-12)); display: grid; gap: var(--space-3); max-width: 72ch; }
 @media (max-width: 720px) { .pricing-notes { max-width: none; } }
-.pricing-notes p { font-size: var(--text-sm); color: var(--color-text-muted); text-wrap: pretty; }
+.pricing-notes p { font-size: var(--text-sm); color: var(--color-text-muted); }
 .pricing-notes a { color: var(--color-cta); font-weight: 600; }
 
 /* ---------- What you own ---------- */
