@@ -395,7 +395,7 @@ a, button, [role="button"], input, textarea, select {
 }
 .example-card__link svg { width: 15px; height: 15px; transition: transform var(--transition-interactive); }
 .example-card__link:hover svg { transform: translate(2px,-2px); }
-.example-caption { text-align: center; max-width: 60ch; margin: clamp(var(--space-8), 5vw, var(--space-12)) auto 0; color: var(--color-text-muted); font-size: var(--text-base); }
+.example-caption { text-align: center; max-width: 60ch; margin: clamp(var(--space-8), 5vw, var(--space-12)) auto clamp(var(--space-10), 6vw, var(--space-16)); color: var(--color-text-muted); font-size: var(--text-base); }
 
 /* ---------- Pricing ---------- */
 .pricing-grid { display: grid; gap: var(--space-6); align-items: start; }
