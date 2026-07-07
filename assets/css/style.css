@@ -144,7 +144,7 @@ ul[role="list"] { list-style: none; }
 input, button, textarea, select { font: inherit; color: inherit; }
 
 h1, h2, h3, h4 { text-wrap: balance; line-height: 1.1; font-family: var(--font-display); font-weight: 500; }
-p, li { text-wrap: pretty; }
+p, li { text-wrap: wrap; }
 
 a { color: inherit; text-decoration: none; }
 
@@ -439,7 +439,7 @@ a, button, [role="button"], input, textarea, select {
 
 .pricing-notes { margin-top: clamp(var(--space-8), 5vw, var(--space-12)); display: grid; gap: var(--space-3); max-width: 72ch; }
 @media (max-width: 720px) { .pricing-notes { max-width: none; } }
-.pricing-notes p { font-size: var(--text-sm); color: var(--color-text-muted); }
+.pricing-notes p { font-size: var(--text-sm); color: var(--color-text-muted); text-wrap: wrap; }
 .pricing-notes a { color: var(--color-cta); font-weight: 600; }
 
 /* ---------- What you own ---------- */
