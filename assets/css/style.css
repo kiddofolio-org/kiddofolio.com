@@ -179,6 +179,9 @@ a, button, [role="button"], input, textarea, select {
 
 .section { padding-block: clamp(var(--space-16), 9vw, var(--space-32)); }
 .section--tight { padding-block: clamp(var(--space-12), 6vw, var(--space-20)); }
+/* Tighten the seam between the Pricing section (which already ends with pricing-notes) and the next section so the stacked paddings don't leave an oversized gap */
+#pricing { padding-bottom: clamp(var(--space-12), 5vw, var(--space-20)); }
+#own { padding-top: clamp(var(--space-12), 5vw, var(--space-20)); }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: var(--space-2);
