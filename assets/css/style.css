@@ -396,7 +396,8 @@ a, button, [role="button"], input, textarea, select {
 
 /* ---------- Pricing ---------- */
 .pricing-grid { display: grid; gap: var(--space-6); align-items: start; }
-@media (min-width: 1040px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 720px) and (max-width: 1099px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .pricing-grid { grid-template-columns: repeat(4, 1fr); gap: var(--space-5); } }
 
 .tier {
   background: var(--color-surface); border: 1px solid var(--color-border);
@@ -407,7 +408,7 @@ a, button, [role="button"], input, textarea, select {
 .tier--featured {
   border-color: var(--color-cta); box-shadow: var(--shadow-lg);
 }
-@media (min-width: 1040px) { .tier--featured { transform: scale(1.035); z-index: 2; } }
+@media (min-width: 1100px) { .tier--featured { transform: scale(1.03); z-index: 2; } }
 .tier__flag {
   position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
   background: var(--color-cta); color: #fff; font-size: var(--text-xs); font-weight: 600;
@@ -418,14 +419,16 @@ a, button, [role="button"], input, textarea, select {
 .tier__best { font-size: var(--text-sm); color: var(--color-text-muted); min-height: 2.6em; }
 .tier__price { display: flex; align-items: baseline; gap: var(--space-2); }
 .tier__price .amt { font-family: var(--font-display); font-size: var(--text-2xl); letter-spacing: -0.01em; }
+.tier__price .amt--quote { font-size: var(--text-xl); }
 .tier__price .from { font-size: var(--text-sm); color: var(--color-text-faint); }
 .tier__deposit { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: calc(-1 * var(--space-3)); }
 .tier__deposit strong { color: var(--color-text); font-weight: 600; }
 .tier__divider { height: 1px; background: var(--color-divider); }
 .tier__meta { display: grid; gap: var(--space-2); font-size: var(--text-sm); }
 .tier__meta div { display: flex; gap: var(--space-2); }
-.tier__meta dt { color: var(--color-text-faint); flex: none; min-width: 5.5em; }
+.tier__meta dt { color: var(--color-text-faint); flex: none; min-width: 4.75em; }
 .tier__meta dd { color: var(--color-text); }
+.tier__options-lead { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: calc(-1 * var(--space-2)); }
 .tier__features { list-style: none; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
 .tier__features li { display: flex; gap: var(--space-3); align-items: flex-start; color: var(--color-text-muted); }
 .tier__features svg { width: 18px; height: 18px; flex: none; margin-top: 2px; color: var(--tier-check, var(--rb-4)); }

@@ -15,9 +15,10 @@ Create three Stripe Payment Links and replace the placeholders in `index.html`:
 - `STRIPE_SIGNATURE_DEPOSIT_LINK_TODO` → Signature deposit ($1,500)
 - `STRIPE_LEGACY_DEPOSIT_LINK_TODO` → Legacy deposit ($2,000)
 
-### 2. Formspree endpoint
-Create a form at https://formspree.io, then replace `REPLACE_ENDPOINT` in the
-contact form `action` (`https://formspree.io/f/REPLACE_ENDPOINT`) in `index.html`.
+### 2. Formspree endpoint — DONE
+Contact form posts to `https://formspree.io/f/xlgyvqyp`. Submissions arrive with
+subject "New Kiddofolio inquiry"; a hidden `_gotcha` honeypot filters bot spam.
+Manage notification email / recipients in the Formspree dashboard.
 
 ### 3. Connect Cloudflare Pages (auto-deploy from this repo)
 1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
