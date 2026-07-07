@@ -438,6 +438,7 @@ a, button, [role="button"], input, textarea, select {
 .tier .btn { margin-top: auto; }
 
 .pricing-notes { margin-top: clamp(var(--space-8), 5vw, var(--space-12)); display: grid; gap: var(--space-3); max-width: 66ch; }
+@media (max-width: 720px) { .pricing-notes { max-width: none; } }
 .pricing-notes p { font-size: var(--text-sm); color: var(--color-text-muted); }
 .pricing-notes a { color: var(--color-cta); font-weight: 600; }
 
