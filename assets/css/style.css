@@ -528,7 +528,7 @@ a, button, [role="button"], input, textarea, select {
 }
 .footer__tag { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm); max-width: 34ch; }
 .footer__cols { display: flex; flex-wrap: wrap; gap: var(--space-12); }
-.footer__col h4 { font-family: var(--font-body); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-faint); margin-bottom: var(--space-4); font-weight: 600; }
+.footer__col .footer__heading { font-family: var(--font-body); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-faint); margin-bottom: var(--space-4); font-weight: 600; line-height: 1.1; text-wrap: balance; }
 .footer__col a, .footer__col span { display: block; font-size: var(--text-sm); color: var(--color-text-muted); padding-block: var(--space-2); }
 .footer__col a:hover { color: var(--color-text); }
 .footer__soon { color: var(--color-text-muted); cursor: default; }
