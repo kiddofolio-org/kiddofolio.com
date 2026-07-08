@@ -26,7 +26,7 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:alt" content="Kiddofolio — custom art gallery websites that turn kids' drawings and paintings into a keepsake site." />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:updated_time" content="2026-07-08T16:33:00-04:00" />
+  <meta property="og:updated_time" content="2026-07-08T17:10:00-04:00" />
   <meta property="og:see_also" content="https://willamonet.com" />
   <meta property="og:see_also" content="https://grayjfolio.com" />
   <meta property="og:see_also" content="https://www.youtube.com/@Kiddofolio" />
@@ -551,7 +551,7 @@
         <div class="section-head section-head--center reveal">
           <span class="eyebrow">Pricing</span>
           <h2>Transparent pricing. Reserve in minutes.</h2>
-          <p>Choose a tier and pay a 50% deposit to reserve your child&rsquo;s gallery &mdash; no call or inquiry form required.</p>
+          <p>Choose a tier and pay a 50% deposit to reserve your child&rsquo;s gallery &mdash; no call required. For add-ons, tell us what you want and we&rsquo;ll send a custom quote.</p>
         </div>
 
         <div class="pricing-grid">
@@ -631,7 +631,26 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 3D &amp; oversized pieces, where feasible</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Blockchain preservation for lasting provenance</li>
             </ul>
-            <a class="btn btn--ghost btn--block" href="#contact">Contact Us</a>
+            <div class="tier__divider" aria-hidden="true"></div>
+            <form class="tier__form" action="https://formspree.io/f/xlgyvqyp" method="POST" aria-label="Request an add-on quote">
+              <input type="hidden" name="_subject" value="New Kiddofolio add-on inquiry" />
+              <input type="hidden" name="tier" value="Add-Ons" />
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
+              <div class="field">
+                <label for="addon-name">Name</label>
+                <input type="text" id="addon-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="addon-email">Email</label>
+                <input type="email" id="addon-email" name="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="addon-message">What are you looking for?</label>
+                <textarea id="addon-message" name="message" placeholder="Tell us which options interest you." required></textarea>
+              </div>
+              <button class="btn btn--ghost" type="submit">Request a Quote</button>
+              <p class="tier__form-note">We&rsquo;ll reply with a custom quote &mdash; no obligation.</p>
+            </form>
           </article>
         </div>
 

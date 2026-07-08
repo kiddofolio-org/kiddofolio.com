@@ -432,6 +432,16 @@ a, button, [role="button"], input, textarea, select {
 .tier__meta dt { color: var(--color-text-faint); flex: none; min-width: 4.75em; }
 .tier__meta dd { color: var(--color-text); }
 .tier__options-lead { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: calc(-1 * var(--space-2)); }
+.tier__form { display: grid; gap: var(--space-3); margin-top: auto; }
+.tier__form .field { gap: calc(var(--space-2) - 2px); }
+.tier__form .field label { font-size: var(--text-xs); font-weight: 600; }
+.tier__form .field input,
+.tier__form .field textarea {
+  font-size: var(--text-sm); padding: 0.55rem 0.7rem;
+}
+.tier__form .field textarea { min-height: 72px; }
+.tier__form .btn { width: 100%; }
+.tier__form-note { font-size: var(--text-xs); color: var(--color-text-faint); }
 .tier__features { list-style: none; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
 .tier__features li { display: flex; gap: var(--space-3); align-items: flex-start; color: var(--color-text-muted); }
 .tier__features svg { width: 18px; height: 18px; flex: none; margin-top: 2px; color: var(--tier-check, var(--rb-4)); }
