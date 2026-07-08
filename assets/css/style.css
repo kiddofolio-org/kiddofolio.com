@@ -422,7 +422,7 @@ a, button, [role="button"], input, textarea, select {
 .tier__best { font-size: var(--text-sm); color: var(--color-text-muted); min-height: 2.6em; }
 .tier__price { display: flex; align-items: baseline; gap: var(--space-2); }
 .tier__price .amt { font-family: var(--font-display); font-size: var(--text-2xl); letter-spacing: -0.01em; }
-.tier__price .amt--quote { font-size: var(--text-xl); }
+.tier__price .amt--quote { font-size: var(--text-lg); line-height: 1.15; letter-spacing: 0; text-wrap: balance; }
 .tier__price .from { font-size: var(--text-sm); color: var(--color-text-faint); }
 .tier__deposit { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: calc(-1 * var(--space-3)); }
 .tier__deposit strong { color: var(--color-text); font-weight: 600; }
