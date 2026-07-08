@@ -26,7 +26,7 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:alt" content="Kiddofolio — custom art gallery websites that turn kids' drawings and paintings into a keepsake site." />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:updated_time" content="2026-07-08T14:58:00-04:00" />
+  <meta property="og:updated_time" content="2026-07-08T15:24:00-04:00" />
   <meta property="og:see_also" content="https://willamonet.com" />
   <meta property="og:see_also" content="https://grayjfolio.com" />
   <meta property="og:see_also" content="https://www.youtube.com/@Kiddofolio" />
@@ -121,28 +121,61 @@
           "@type": "Offer",
           "name": "Starter Gallery",
           "price": "2000",
-          "priceCurrency": "USD"
+          "priceCurrency": "USD",
+          "url": "https://kiddofolio.com/#pricing"
         },
         {
           "@type": "Offer",
           "name": "Signature Gallery",
           "price": "3000",
-          "priceCurrency": "USD"
+          "priceCurrency": "USD",
+          "url": "https://kiddofolio.com/#pricing"
         },
         {
           "@type": "Offer",
           "name": "Legacy Gallery",
           "price": "4000",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Bespoke Gallery",
           "priceCurrency": "USD",
-          "description": "Custom quote for larger or more involved collections."
+          "url": "https://kiddofolio.com/#pricing"
         }
       ],
-      "@id": "https://kiddofolio.com/#service"
+      "@id": "https://kiddofolio.com/#service",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Add-Ons",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "A family site — multiple children's galleries together in one place",
+            "priceCurrency": "USD",
+            "description": "Priced per option; added to any tier by custom quote."
+          },
+          {
+            "@type": "Offer",
+            "name": "A CV-style gallery — activities & roles, writings, awards, and certificates",
+            "priceCurrency": "USD",
+            "description": "Priced per option; added to any tier by custom quote."
+          },
+          {
+            "@type": "Offer",
+            "name": "Search-engine optimization",
+            "priceCurrency": "USD",
+            "description": "Priced per option; added to any tier by custom quote."
+          },
+          {
+            "@type": "Offer",
+            "name": "3D & oversized pieces, where feasible",
+            "priceCurrency": "USD",
+            "description": "Priced per option; added to any tier by custom quote."
+          },
+          {
+            "@type": "Offer",
+            "name": "Blockchain preservation for lasting provenance",
+            "priceCurrency": "USD",
+            "description": "Priced per option; added to any tier by custom quote."
+          }
+        ]
+      }
     },
     {
       "@type": "ItemList",
@@ -166,17 +199,10 @@
           "position": 3,
           "name": "Legacy Gallery",
           "url": "https://kiddofolio.com/#pricing"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Bespoke Gallery",
-          "url": "https://kiddofolio.com/#pricing"
         }
       ]
     },
     {
-      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -192,7 +218,7 @@
           "name": "Can you build galleries for more than one child?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Each child gets their own gallery, and additional children are 20% off after the first — on any tier. We’ll scope each one with you."
+            "text": "Yes. Each child gets their own gallery, and additional children are 20% off after the first — on any tier. If you’d rather keep everyone together, a family site is available as an add-on: multiple children’s galleries in one place, under a single site. We’ll scope either approach with you."
           }
         },
         {
@@ -208,7 +234,7 @@
           "name": "What kinds of artwork can I send?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Flat drawings, paintings, and paper-based school projects are the best fit. Dimensional or 3D pieces may be possible in the Bespoke tier — we’ll confirm scope before work begins."
+            "text": "Flat drawings, paintings, and paper-based school projects are the best fit. Dimensional or 3D pieces may be possible as an add-on — we’ll confirm scope before work begins."
           }
         },
         {
@@ -280,7 +306,15 @@
           "name": "How does the blockchain preservation option work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For families who want it, we can also publish the gallery to Arweave — a decentralized network where data is paid for once and kept in place long-term, rather than depending on a single server or subscription. We pair it with an AR.IO name (ArNS), which acts like a web address for that permanently stored version, so it stays easy to find and share. It’s a natural fit for Bespoke projects, but if you’d like it on another tier, just ask and we’ll add it to your quote."
+            "text": "For families who want it, we can also publish the gallery to Arweave — a decentralized network where data is paid for once and kept in place long-term, rather than depending on a single server or subscription. We pair it with an AR.IO name (ArNS), which acts like a web address for that permanently stored version, so it stays easy to find and share. It’s available as an add-on on any tier — just ask and we’ll include it in your quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the gallery be found on Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every gallery ships with sensible search-engine basics built in, so it can be found by name once search engines index it. If you want more, search-engine optimization is available as an add-on — we tune titles, descriptions, structured data, and a sitemap so the gallery is easier to find and shows a clean preview when shared. Search engines set their own timing, so we can’t promise a specific ranking, but the groundwork is done right."
           }
         },
         {
@@ -320,7 +354,7 @@
           "name": "What if my collection is bigger or smaller than I estimated?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No problem. If your box doesn’t match the tier you picked, we’ll confirm any scope or price adjustment with you before any work begins. For larger or more involved collections, our Bespoke tier is built to fit."
+            "text": "No problem. If your box doesn’t match the tier you picked, we’ll confirm any scope or price adjustment with you before any work begins. For larger or more involved collections, the Legacy tier or a custom quote will fit."
           }
         },
         {
@@ -563,19 +597,14 @@
             <a class="btn btn--ghost btn--block" href="https://buy.stripe.com/00w4gtbbh70j6x8aNFes005">Reserve for $2,000</a>
           </article>
 
-          <!-- Bespoke -->
+          <!-- Add-Ons -->
           <article class="tier reveal" style="--tier-check: var(--rb-10)">
-            <h3 class="tier__name">Bespoke Gallery</h3>
-            <p class="tier__best">Best when you want the whole thing handled, whatever the size.</p>
-            <div class="tier__price"><span class="amt amt--quote">Custom quote</span></div>
-            <p class="tier__deposit">Tell us about your collection and we&rsquo;ll scope it with you.</p>
+            <h3 class="tier__name">Add-Ons</h3>
+            <div class="tier__price"><span class="amt amt--quote">Priced per option</span></div>
+            <p class="tier__deposit">Tell us what you want and we&rsquo;ll deliver a custom quote. Options include:</p>
             <div class="tier__divider" aria-hidden="true"></div>
-            <dl class="tier__meta">
-              <div><dt>Works</dt><dd>100+ pieces</dd></div>
-              <div><dt>Curation</dt><dd>Full curation &mdash; we do the picking for you</dd></div>
-            </dl>
-            <p class="tier__options-lead">Tailored to your project. Options can include:</p>
             <ul class="tier__features" role="list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> A family site &mdash; multiple children&rsquo;s galleries together in one place</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> A CV-style gallery &mdash; activities &amp; roles, writings, awards, and certificates alongside the art</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Search-engine optimization, so the gallery is easy to find by name</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 3D &amp; oversized pieces, where feasible</li>
@@ -656,7 +685,7 @@
           </details>
           <details class="faq">
             <summary class="faq__q">Can you build galleries for more than one child?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>Yes. Each child gets their own gallery, and additional children are 20% off after the first &mdash; on any tier. We&rsquo;ll scope each one with you.</p></div>
+            <div class="faq__a"><p>Yes. Each child gets their own gallery, and additional children are 20% off after the first &mdash; on any tier. If you&rsquo;d rather keep everyone together, a family site is available as an add-on: multiple children&rsquo;s galleries in one place, under a single site. We&rsquo;ll scope either approach with you.</p></div>
           </details>
           <details class="faq">
             <summary class="faq__q">Can this be a gift from a grandparent or relative?<span class="faq__icon" aria-hidden="true"></span></summary>
@@ -664,7 +693,7 @@
           </details>
           <details class="faq">
             <summary class="faq__q">What kinds of artwork can I send?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>Flat drawings, paintings, and paper-based school projects are the best fit. Dimensional or 3D pieces may be possible in the Bespoke tier &mdash; we&rsquo;ll confirm scope before work begins.</p></div>
+            <div class="faq__a"><p>Flat drawings, paintings, and paper-based school projects are the best fit. Dimensional or 3D pieces may be possible as an add-on &mdash; we&rsquo;ll confirm scope before work begins.</p></div>
           </details>
           <details class="faq">
             <summary class="faq__q">Who owns the website and artwork?<span class="faq__icon" aria-hidden="true"></span></summary>
@@ -700,7 +729,11 @@
           </details>
           <details class="faq">
             <summary class="faq__q">How does the blockchain preservation option work?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>For families who want it, we can also publish the gallery to Arweave &mdash; a decentralized network where data is paid for once and kept in place long-term, rather than depending on a single server or subscription. We pair it with an AR.IO name (ArNS), which acts like a web address for that permanently stored version, so it stays easy to find and share. It&rsquo;s a natural fit for Bespoke projects, but if you&rsquo;d like it on another tier, just ask and we&rsquo;ll add it to your quote.</p></div>
+            <div class="faq__a"><p>For families who want it, we can also publish the gallery to Arweave &mdash; a decentralized network where data is paid for once and kept in place long-term, rather than depending on a single server or subscription. We pair it with an AR.IO name (ArNS), which acts like a web address for that permanently stored version, so it stays easy to find and share. It&rsquo;s available as an add-on on any tier &mdash; just ask and we&rsquo;ll include it in your quote.</p></div>
+          </details>
+          <details class="faq">
+            <summary class="faq__q">Can the gallery be found on Google?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Every gallery ships with sensible search-engine basics built in, so it can be found by name once search engines index it. If you want more, search-engine optimization is available as an add-on &mdash; we tune titles, descriptions, structured data, and a sitemap so the gallery is easier to find and shows a clean preview when shared. Search engines set their own timing, so we can&rsquo;t promise a specific ranking, but the groundwork is done right.</p></div>
           </details>
           <details class="faq">
             <summary class="faq__q">Is Kiddofolio available outside the US?<span class="faq__icon" aria-hidden="true"></span></summary>
@@ -720,7 +753,7 @@
           </details>
           <details class="faq">
             <summary class="faq__q">What if my collection is bigger or smaller than I estimated?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>No problem. If your box doesn&rsquo;t match the tier you picked, we&rsquo;ll confirm any scope or price adjustment with you before any work begins. For larger or more involved collections, our Bespoke tier is built to fit.</p></div>
+            <div class="faq__a"><p>No problem. If your box doesn&rsquo;t match the tier you picked, we&rsquo;ll confirm any scope or price adjustment with you before any work begins. For larger or more involved collections, the Legacy tier or a custom quote will fit.</p></div>
           </details>
           <details class="faq">
             <summary class="faq__q">Can I ask a question before reserving?<span class="faq__icon" aria-hidden="true"></span></summary>
@@ -757,7 +790,7 @@
               <option value="Starter">Starter Gallery &mdash; $2,000</option>
               <option value="Signature">Signature Gallery &mdash; $3,000</option>
               <option value="Legacy">Legacy Gallery &mdash; $4,000</option>
-              <option value="Bespoke">Bespoke Gallery &mdash; custom quote</option>
+              <option value="Add-Ons">Add-Ons &mdash; priced per option</option>
             </select>
           </div>
           <div class="field">
