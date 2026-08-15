@@ -609,3 +609,160 @@ a, button, [role="button"], input, textarea, select {
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* ==========================================================================
+   CONFIGURATOR  (pricing builder)
+   ========================================================================== */
+.cfg { max-width: 940px; margin-inline: auto; display: grid; gap: clamp(var(--space-8), 4vw, var(--space-12)); }
+
+.cfg__q { display: grid; gap: var(--space-4); border: 0; margin: 0; padding: 0; min-width: 0; }
+.cfg__legend {
+  font-family: var(--font-display); font-size: var(--text-xl); letter-spacing: -0.01em;
+  padding: 0; margin: 0 0 var(--space-1); display: block; width: 100%;
+}
+.cfg__step {
+  display: inline-block; font-family: var(--font-body); font-size: var(--text-xs);
+  letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600;
+  color: var(--color-text-faint); margin-bottom: var(--space-2);
+}
+.cfg__help { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 62ch; margin-top: var(--space-1); }
+
+.cfg__options { display: grid; gap: var(--space-3); }
+@media (min-width: 700px) { .cfg__options { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .cfg__options { grid-template-columns: repeat(4, 1fr); } }
+
+.cfg__opt { position: relative; display: block; }
+.cfg__opt input {
+  position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0;
+  pointer-events: none;
+}
+.cfg__card {
+  display: flex; flex-direction: column; gap: var(--space-2); height: 100%;
+  padding: var(--space-5); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); background: var(--color-surface);
+  cursor: pointer; transition: border-color var(--transition-interactive),
+    box-shadow var(--transition-interactive), transform var(--transition-interactive),
+    background var(--transition-interactive);
+}
+.cfg__card:hover { border-color: var(--color-text); background: var(--color-surface-2); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.cfg__opt input:focus-visible + .cfg__card { outline: 2px solid var(--color-cta); outline-offset: 3px; }
+.cfg__opt input:checked + .cfg__card {
+  border-color: var(--color-cta); background: var(--color-accent-soft);
+  box-shadow: 0 0 0 1px var(--color-cta), var(--shadow-md);
+}
+.cfg__opt-label { font-family: var(--font-body); font-weight: 600; font-size: var(--text-base); color: var(--color-text); line-height: 1.25; padding-right: 2.25rem; min-height: 2.5em; }
+.cfg__opt-price { font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text); letter-spacing: -0.01em; margin-top: auto; }
+.cfg__opt-price--quote { font-size: var(--text-base); font-family: var(--font-body); font-weight: 600; color: var(--color-text-muted); }
+.cfg__opt-tick {
+  position: absolute; top: var(--space-4); right: var(--space-4);
+  width: 20px; height: 20px; border-radius: 50%; border: 1px solid var(--color-border);
+  display: grid; place-items: center; background: var(--color-surface-2);
+  transition: background var(--transition-interactive), border-color var(--transition-interactive);
+}
+.cfg__opt-tick svg { width: 12px; height: 12px; color: #fff; opacity: 0; transition: opacity var(--transition-interactive); }
+.cfg__opt input:checked + .cfg__card .cfg__opt-tick { background: var(--color-cta); border-color: var(--color-cta); }
+.cfg__opt input:checked + .cfg__card .cfg__opt-tick svg { opacity: 1; }
+
+/* ---- Summary panel ---- */
+.cfg__summary {
+  border: 1px solid var(--color-border); border-radius: var(--radius-xl);
+  background: var(--color-surface); padding: clamp(var(--space-6), 4vw, var(--space-10));
+  box-shadow: var(--shadow-card); display: grid; gap: var(--space-5);
+}
+.cfg__prompt { font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text); text-wrap: balance; }
+.cfg__prompt-sub { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-2); }
+
+.cfg__lines { display: grid; gap: var(--space-3); margin: 0; }
+.cfg__line { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); font-size: var(--text-base); }
+.cfg__line dt { color: var(--color-text-muted); }
+.cfg__line dd { margin: 0; font-variant-numeric: tabular-nums; color: var(--color-text); font-weight: 500; }
+.cfg__line--total { border-top: 1px solid var(--color-divider); padding-top: var(--space-4); }
+.cfg__line--total dt { color: var(--color-text); font-weight: 600; font-size: var(--text-lg); }
+.cfg__line--total dd { font-family: var(--font-display); font-size: var(--text-xl); letter-spacing: -0.01em; }
+.cfg__split { display: grid; gap: var(--space-3); padding: var(--space-4) var(--space-5); background: var(--color-surface-offset); border-radius: var(--radius-md); }
+.cfg__split .cfg__line { font-size: var(--text-sm); }
+.cfg__note { font-size: var(--text-sm); color: var(--color-text-muted); display: flex; align-items: center; gap: var(--space-2); }
+.cfg__note .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--rb-4); flex: none; }
+
+.cfg__ack { display: flex; gap: var(--space-3); align-items: flex-start; font-size: var(--text-sm); color: var(--color-text); cursor: pointer; line-height: 1.5; }
+.cfg__ack input { width: 20px; height: 20px; flex: none; margin-top: 1px; accent-color: var(--color-cta); cursor: pointer; }
+.cfg__ack input:focus-visible { outline: 2px solid var(--color-cta); outline-offset: 3px; }
+.cfg__cta[aria-disabled="true"] { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
+.cfg__cta[aria-disabled="true"]:hover { background: var(--color-cta); transform: none; box-shadow: none; }
+.cfg__error { font-size: var(--text-sm); color: var(--rb-1); font-weight: 600; }
+
+.cfg [hidden] { display: none !important; }
+
+/* ---- Custom quote form ---- */
+.cfg__quote { display: grid; gap: var(--space-5); }
+.cfg__quote-head h3 { font-family: var(--font-display); font-size: var(--text-xl); letter-spacing: -0.01em; }
+.cfg__quote-head p { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-2); max-width: 62ch; }
+.cfg__quote-grid { display: grid; gap: var(--space-5); }
+@media (min-width: 700px) { .cfg__quote-grid { grid-template-columns: repeat(2, 1fr); } .cfg__quote-grid .field--full { grid-column: 1 / -1; } }
+
+/* ---- Policy list ---- */
+.policy-grid { display: grid; gap: var(--space-6); }
+@media (min-width: 760px) { .policy-grid { grid-template-columns: repeat(3, 1fr); } }
+.policy-item {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: var(--space-6); display: grid; gap: var(--space-3);
+  align-content: start;
+}
+.policy-item h3 { font-family: var(--font-display); font-size: var(--text-lg); }
+.policy-item ul { list-style: none; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
+.policy-item li { display: flex; gap: var(--space-3); align-items: flex-start; color: var(--color-text-muted); }
+.policy-item li::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%; flex: none; margin-top: 0.55em;
+  background: var(--policy-color, var(--rb-4));
+}
+
+/* Three-step variant of the how-it-works grid */
+@media (min-width: 720px) { .steps--three { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1040px) { .steps--three { grid-template-columns: repeat(3, 1fr); } }
+
+/* Configurator: prevent intrinsic-width blowout on narrow viewports.
+   Auto grid tracks size to max-content, which pushed the whole pricing
+   section past the viewport at ~390px. Pin every track to minmax(0, 1fr)
+   and allow flex/grid children to shrink below their min-content width. */
+.cfg,
+.cfg__q,
+.cfg__options,
+.cfg__lines,
+.cfg__split,
+.cfg__quote,
+.cfg__quote-grid { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) {
+  .cfg__options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cfg__quote-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  .cfg__options { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.cfg > *,
+.cfg__q > *,
+.cfg__options > *,
+.cfg__summary > *,
+.cfg__opt,
+.cfg__card,
+.cfg__card > *,
+.cfg__line,
+.cfg__line dt,
+.cfg__line dd,
+.cfg__legend,
+.cfg__quote-grid > * { min-width: 0; }
+.cfg__opt-label,
+.cfg__opt-price,
+.cfg__legend,
+.cfg__prompt,
+.cfg__line dt { overflow-wrap: break-word; }
+.cfg__line { gap: var(--space-3); }
+.cfg__cta { max-width: 100%; }
+@media (max-width: 460px) {
+  .cfg__opt-label { padding-right: 2.5rem; min-height: 0; }
+  .cfg__cta { width: 100%; justify-content: center; text-align: center; }
+}
+.cfg__q { min-inline-size: 0; }
+.cfg__legend { min-inline-size: 0; max-inline-size: 100%; }
+@media (max-width: 460px) {
+  .cfg__cta { white-space: normal; overflow-wrap: break-word; line-height: 1.3; padding-inline: var(--space-5); }
+}
